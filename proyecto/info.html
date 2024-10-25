@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="informacion.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <title>Información de Consumo</title>
+</head>
+<body>
+
+<!-- Menú hamburguesa -->
+<input type="checkbox" id="btn-menu">
+<label for="btn-menu" class="menu-hamburguesa">
+    <div class="menu-bar"></div>
+    <div class="menu-bar"></div>
+    <div class="menu-bar"></div>
+</label>
+
+<!-- Menú desplegable -->
+<div class="container-menu">
+    <div class="cont-menu">
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="pago.html">Pago de meses anteriores</a>
+            <a href="info.html">Información de consumo</a>
+            <a href="consumo.html">Mi estado de consumo</a>
+        </nav>
+        <label for="btn-menu">✖️</label>
+    </div>
+</div>
+
+<!-- Slider con Swiper -->
+<div class="swiper mySwiper">
+    <div class="swiper-wrapper">
+        <!-- Sección BT2 -->
+        <div class="swiper-slide">
+            <div class="frame glow">
+                <h2>Tarifa BT2</h2>
+                <p><strong>Cargo Fijo Mensual:</strong> S/ 25.62</p>
+                <p><strong>Máximo consumo sin cargos adicionales:</strong> 30 kWh</p>
+                <p><strong>Precio por kWh:</strong> S/ 0.15 a S/ 0.30</p>
+                <p><strong>Cargos Adicionales:</strong></p>
+                <ul>
+                    <li>Si el consumo supera los 30 kWh, se pasa automáticamente a BT3.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sección BT3 -->
+        <div class="swiper-slide">
+            <div class="frame glow">
+                <h2>Tarifa BT3</h2>
+                <p><strong>Cargo Fijo Mensual:</strong> S/ 24.51</p>
+                <p><strong>Máximo consumo sin cargos adicionales:</strong> 140 kWh</p>
+                <p><strong>Precio por kWh:</strong> S/ 0.30 a S/ 0.50</p>
+                <p><strong>Cargos Adicionales:</strong></p>
+                <ul>
+                    <li>Si el consumo supera los 140 kWh, se pasa automáticamente a BT4.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sección BT4 -->
+        <div class="swiper-slide">
+            <div class="frame glow">
+                <h2>Tarifa BT4</h2>
+                <p><strong>Cargo Fijo Mensual:</strong> S/ 24.51</p>
+                <p><strong>Máximo consumo sin cargos adicionales:</strong> 230-240 kWh</p>
+                <p><strong>Precio por kWh:</strong> S/ 0.50 a S/ 1.00</p>
+                <p><strong>Cargos Adicionales:</strong></p>
+                <ul>
+                    <li>Consumo entre 350 y 500 kWh: Recargo de S/ 0.852 por kWh.</li>
+                    <li>Consumo entre 500 y 1000 kWh: Recargo de S/ 1.917 por kWh.</li>
+                    <li>Consumo entre 1000 y 5000 kWh: Recargo de S/ 2.662 por kWh.</li>
+                    <li>Consumo mayor a 5000 kWh: Recargo de S/ 2.982 por kWh.</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Sección MT2 -->
+        <div class="swiper-slide">
+            <div class="frame glow">
+                <h2>Tarifa MT2</h2>
+                <p><strong>Cargo Fijo Mensual:</strong> S/ 25.62</p>
+                <p><strong>Máximo consumo sin cargos adicionales:</strong> 500 kWh</p>
+                <p><strong>Precio por kWh:</strong></p>
+                <ul>
+                    <li>Horas de Punta: S/ 33.12 por kWh</li>
+                    <li>Horas Fuera de Punta: S/ 28.16 por kWh</li>
+                </ul>
+                <p><strong>Cargos Adicionales:</strong></p>
+                <ul>
+                    <li>Cargo por Potencia Activa en Horas Punta: S/ 64.39 por kW-mes.</li>
+                    <li>Cargo por Potencia Activa en Horas Fuera de Punta: S/ 141.59 por kW-mes.</li>
+                    <li>Cargo por Energía Reactiva: Aplicado si se excede el límite de energía reactiva.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!-- Controles de navegación -->
+    <div class="rows">
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+<script src="informacion.js"></script>
+</body>
+</html>
+
+
+

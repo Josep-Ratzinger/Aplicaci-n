@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #0c0c0c;
+    overflow-x: hidden;
+}
+
+.menu-hamburguesa {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#btn-menu {
+    display: none;
+}
+
+.menu-bar {
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 6px 0;
+}
+
+.container-menu {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    transition: all 500ms ease;
+    opacity: 0;
+    visibility: hidden;
+    z-index: 1;
+}
+
+#btn-menu:checked ~ .container-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+.cont-menu {
+    width: 100%;
+    max-width: 250px;
+    background: #1c1c1c;
+    height: 100vh;
+    position: relative;
+    transition: all 500ms ease;
+    transform: translateX(-100%);
+}
+
+#btn-menu:checked ~ .container-menu .cont-menu {
+    transform: translateX(0%);
+}
+
+.cont-menu nav {
+    transform: translateY(30%);
+}
+
+.cont-menu nav a {
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    color: #c7c7c7;
+    border-left: 5px solid transparent;
+    transition: all 400ms ease;
+}
+
+.cont-menu nav a:hover {
+    border-left: 5px solid #c7c7c7;
+    background: #1f1f1f;
+}
+
+.cont-menu label {
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Estilo para la página de pago de meses anteriores */
+.container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+}
+
+.frame {
+    position: relative;
+    margin-bottom: 50px;
+    width: 400px;
+    background: linear-gradient(0deg, black, rgb(34, 34, 34));
+    padding: 30px;
+    text-align: center;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+    color: white;
+}
+
+.glow:before, .glow:after {
+    content: '';
+    position: absolute;
+    left: -2px;
+    top: -2px;
+    width: calc(100% + 5px);
+    height: calc(100% + 5px);
+    z-index: -1;
+    background: linear-gradient(45deg,
+    rgb(230, 176, 77),
+    rgb(255, 0, 255),
+    rgb(110, 13, 217),
+    rgb(255, 51, 0),
+    rgb(0, 255, 127),
+    rgb(255, 255, 0),
+    rgb(0, 128, 255)
+    );
+    background-size: 400%;
+    animation: animate 20s linear infinite;
+}
+
+@keyframes animate {
+    0% {
+        background-position: 0 0;
+    }
+    50% {
+        background-position: 100% 0;
+    }
+    100% {
+        background-position: 0 0;
+    }
+}
+
+.glow:after {
+    filter: blur(40px);
+}
+
+h2, h3 {
+    text-align: center;
+    font-size: 28px;
+    margin-bottom: 20px;
+    color: white;
+}
+
+label {
+    font-size: 22px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 20px;
+    font-size: 20px;
+    width: 100%;
+}
+
+
+.frame div {
+    margin: 20px 0;
+}
+
+.frame p {
+    font-size: 20px;
+    margin: 10px 0;
+    display: flex;
+    justify-content: space-between;
+}
