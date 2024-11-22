@@ -33,22 +33,19 @@ body {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
 }
 
-/* Estilo para la página de pago de meses anteriores */
 .container {
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     height: 100%;
-    width: 90%;
-    margin: auto;
-    text-align: center;
 }
+
 
 .frame {
     position: relative;
-    margin-bottom: 30px;
-    width: 100%;
+    margin-bottom: 40px;
+    width: 300px;
     background: linear-gradient(0deg, black, rgb(34, 34, 34));
     padding: 20px;
     text-align: center;
@@ -94,33 +91,93 @@ body {
     filter: blur(40px);
 }
 
-h2, h3 {
-    text-align: center;
-    font-size: 28px;
-    margin-bottom: 20px;
-    color: white;
-}
-
-label {
-    font-size: 22px;
-    font-weight: bold;
-    margin-bottom: 10px;
-}
-
-select {
-    padding: 20px;
-    font-size: 20px;
-    width: 100%;
-}
-
-
-.frame div {
-    margin: 20px 0;
-}
-
-.frame p {
-    font-size: 20px;
-    margin: 10px 0;
+.circle-container {
+    position: relative;
+    width: 350px;
+    height: 350px;
+    margin-bottom: 40px;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
+    align-items: center;
 }
+
+.circle {
+    width: 100%;
+    height: 100%;
+    border: 5px solid black;
+    border-radius: 50%;
+    position: relative;
+    overflow: hidden;
+}
+
+.wave {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(
+            45deg,
+    rgb(230, 176, 77),
+    rgb(255, 0, 255),
+    rgb(110, 13, 217),
+    rgb(255, 51, 0),
+    rgb(0, 255, 127),
+    rgb(255, 255, 0),
+    rgb(0, 128, 255),
+    rgb(230, 176, 77)
+    );
+    background-size: 400%;
+    animation: wave 4s ease-in-out infinite, animate 20s linear infinite;
+
+}
+
+
+
+@keyframes wave {
+    0%, 100% {
+        clip-path: polygon(
+                0% 47%,
+                10% 48%,
+                33% 54%,
+                54% 60%,
+                70% 61%,
+                84% 59%,
+                100% 52%,
+                100% 100%,
+                0% 100%
+        );
+    }
+
+    50% {
+        clip-path: polygon(0% 60%,
+        15% 65%,
+        34% 66%,
+        51% 62%,
+        67% 50%,
+        84% 45%,
+        100% 46%,
+        100% 100%,
+        0% 100%
+        );
+    }
+}
+
+.percentage {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+    color: white;
+    font-weight: bold;
+}
+
+#extraPagoFrame {
+    display: none;
+}
+
+
+.menu.active {
+    display: flex;
+}
+

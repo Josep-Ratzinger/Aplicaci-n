@@ -3,16 +3,16 @@ body {
     padding: 0;
     font-family: Arial, sans-serif;
     display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    align-items: center;
+    justify-content: center;
     height: 100vh;
     background-color: #0c0c0c;
     color: white;
 }
 
 .back-button {
-    position: fixed;
+    position: absolute;
     top: 10px;
     left: 10px;
     padding: 10px 20px;
@@ -32,53 +32,27 @@ body {
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
 }
 
-.info-container {
+.container {
     text-align: center;
     width: 90%;
-    max-width: 800px;
-    margin-top: 50px;
 }
 
-h1 {
+h2 {
     font-size: 2.5rem;
-    margin-bottom: 30px;
+    margin-bottom: 20px;
     color: #45f3ff;
 }
 
-.info-boxes {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    gap: 20px;
-}
-
-.info-box {
-    width: 200px;
-    height: 100px;
-    background: linear-gradient(45deg, #45f3ff, #d9138a);
-    color: white;
-    font-size: 1.5rem;
-    font-weight: bold;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.chart-container {
+    width: 90%;
+    margin: auto;
+    background-color: #1c1c1c;
     border-radius: 10px;
-    cursor: pointer;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.5);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 20px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-.info-box:hover {
-    transform: scale(1.1);
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.7);
-}
-
-
-
-
-
-
-
 
 
